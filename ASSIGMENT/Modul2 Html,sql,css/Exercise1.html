@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: hsl(0, 0%, 100%);
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #beee0f;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #3E641A;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            color: #3E641A;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #8CBF3D;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #5A772A;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #3E641A;
+        }
+        .card-type {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Step 1: Your details</h2>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="First and last name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="example@domain.com">
+
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" placeholder="Eg. +447500000000">
+
+        <h2>Step 2: Delivery address</h2>
+        <label for="address">Address</label>
+        <textarea id="address" placeholder="Enter your address"></textarea>
+
+        <label for="postcode">Post code</label>
+        <input type="text" id="postcode">
+
+        <label for="country">Country</label>
+        <input type="text" id="country">
+
+        <h2>Step 3: Card details</h2>
+        <div class="card-type">
+            <label>Card type</label>
+            <input type="radio" name="cardtype" value="visa"> VISA
+            <input type="radio" name="cardtype" value="amex"> AmEx
+            <input type="radio" name="cardtype" value="mastercard"> Mastercard
+        </div>
+
+        <label for="cardnumber">Card number</label>
+        <input type="text" id="cardnumber">
+
+        <label for="securitycode">Security code</label>
+        <input type="text" id="securitycode">
+
+        <label for="nameoncard">Name on card</label>
+        <input type="text" id="nameoncard" placeholder="Exact name as on the card">
+
+        <button type="submit" class="btn">BUY IT!</button>
+    </div>
+</body>
+</html>
